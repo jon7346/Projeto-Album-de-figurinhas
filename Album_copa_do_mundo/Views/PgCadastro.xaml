@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Album_copa_do_mundo.Views.PgCadastro"
+             Title="PgCadastro">
+    <ScrollView Padding="20">
+        <VerticalStackLayout Spacing="15">
+            <Image x:Name="ImgPreview" Source="placeholder.png" HeightRequest="120" HorizontalOptions="Center"/>
+            <Button Text="Selecionar Foto" Clicked="OnSelecionarFotoClicked"/>
+
+            <Entry x:Name="EntryNome" Placeholder="Nome do Jogador" />
+            <Entry x:Name="EntrySelecao" Placeholder="Seleção" />
+
+            <Picker x:Name="PickerTipo" Title="Tipo de Figurinha">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Comum</x:String>
+                        <x:String>Especial</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Obtido:" VerticalOptions="Center"/>
+                <Switch x:Name="SwitchObtido" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Desejado:" VerticalOptions="Center"/>
+                <Switch x:Name="SwitchDesejado" />
+            </HorizontalStackLayout>
+
+            <Button Text="Salvar Registro" Clicked="OnSalvarClicked" BackgroundColor="#28A745" TextColor="White" Margin="0,20,0,0"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
