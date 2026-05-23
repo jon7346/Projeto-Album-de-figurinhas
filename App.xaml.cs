@@ -1,4 +1,4 @@
-﻿namespace Projeto_Album_de_figurinhas
+﻿namespace App_Copa
 {
     public partial class App : Application
     {
