@@ -1,1 +1,0 @@
-# Projeto-Album-de-figurinhas

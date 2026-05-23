@@ -1,4 +1,4 @@
-﻿namespace Projeto_Album_de_figurinhas
+﻿namespace App_Copa
 {
     public partial class MainPage : ContentPage
     {
@@ -9,7 +9,7 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private void OnCounterClicked(object? sender, EventArgs e)
         {
             count++;
 
@@ -21,5 +21,4 @@
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
     }
-
 }
