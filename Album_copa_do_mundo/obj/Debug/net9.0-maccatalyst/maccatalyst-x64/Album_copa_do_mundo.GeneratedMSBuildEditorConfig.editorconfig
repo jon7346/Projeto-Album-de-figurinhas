@@ -45,20 +45,20 @@ build_metadata.AdditionalFiles.ManifestResourceName = Album_copa_do_mundo.Resour
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Projetos/Pessoais/Projeto-Album-de-figurinhas/Album_copa_do_mundo/Views/ListaFigurinhas.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Album_copa_do_mundo.Views.ListaFigurinhas.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\ListaFigurinhas.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\ListaFigurinhas.xaml
-
 [C:/Projetos/Pessoais/Projeto-Album-de-figurinhas/Album_copa_do_mundo/Views/MenuPrincipal.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Album_copa_do_mundo.Views.MenuPrincipal.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MenuPrincipal.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MenuPrincipal.xaml
 
-[C:/Projetos/Pessoais/Projeto-Album-de-figurinhas/Album_copa_do_mundo/Views/PgCadastro.xaml]
+[C:/Projetos/Pessoais/Projeto-Album-de-figurinhas/Album_copa_do_mundo/Views/PgCadastroFigurinhas.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = Album_copa_do_mundo.Views.PgCadastro.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\PgCadastro.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\PgCadastro.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Album_copa_do_mundo.Views.PgCadastroFigurinhas.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PgCadastroFigurinhas.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PgCadastroFigurinhas.xaml
+
+[C:/Projetos/Pessoais/Projeto-Album-de-figurinhas/Album_copa_do_mundo/Views/PgListagemFigurinhas.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Album_copa_do_mundo.Views.PgListagemFigurinhas.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\PgListagemFigurinhas.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\PgListagemFigurinhas.xaml

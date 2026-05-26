@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Album_copa_do_mundo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+29d318ad541db665686cf53be530ade930802ecc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+59b163ce347b6bff875e48d8d38f8a8f510d1856")]
 [assembly: System.Reflection.AssemblyProductAttribute("Album_copa_do_mundo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Album_copa_do_mundo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

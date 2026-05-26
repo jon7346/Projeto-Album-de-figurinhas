@@ -2,18 +2,18 @@ namespace Album_copa_do_mundo.Views;
 
 public partial class MenuPrincipal : ContentPage
 {
-	public MenuPrincipal()
-	{
-		InitializeComponent();
-	}
-
-    private void OnCadastroClicked(object sender, EventArgs e)
+    public MenuPrincipal()
     {
-        Navigation.PushAsync(new PgCadastro());
+        InitializeComponent();
     }
 
-    private void OnListaClicked(object sender, EventArgs e)
+    private void OnCadastroFigurinhasClicked(object sender, EventArgs e)
     {
-        Navigation.PushAsync(new ListaFigurinhas());
+        Navigation.PushAsync(new PgCadastroFigurinhas());
+    }
+
+    private void OnListagemFigurinhasClicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new PgListagemFigurinhas());
     }
 }

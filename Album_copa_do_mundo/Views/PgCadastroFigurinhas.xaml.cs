@@ -1,11 +1,11 @@
 namespace Album_copa_do_mundo.Views;
 
-public partial class PgCadastro : ContentPage
+public partial class PgCadastroFigurinhas : ContentPage
 {
-	public PgCadastro()
-	{
-		InitializeComponent();
-	}
+    public PgCadastroFigurinhas()
+    {
+        InitializeComponent();
+    }
 
     private void OnSelecionarFotoClicked(object sender, EventArgs e)
     {

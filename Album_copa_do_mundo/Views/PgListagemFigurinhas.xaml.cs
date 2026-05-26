@@ -1,11 +1,11 @@
 namespace Album_copa_do_mundo.Views;
 
-public partial class ListaFigurinhas : ContentPage
+public partial class PgListagemFigurinhas : ContentPage
 {
-	public ListaFigurinhas()
-	{
-		InitializeComponent();
-	}
+    public PgListagemFigurinhas()
+    {
+        InitializeComponent();
+    }
 
     private void OnFiltroChanged(object sender, TextChangedEventArgs e)
     {

@@ -50,7 +50,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 		
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -67,13 +66,22 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\PgListagemFigurinhas.xaml.cs">
+	    <DependentUpon>PgListagemFigurinhas.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\PgCadastroFigurinhas.xaml.cs">
+	    <DependentUpon>PgCadastroFigurinhas.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\MenuPrincipal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\ListaFigurinhas.xaml">
+	  <MauiXaml Update="Views\PgListagemFigurinhas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\PgCadastro.xaml">
+	  <MauiXaml Update="Views\PgCadastroFigurinhas.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

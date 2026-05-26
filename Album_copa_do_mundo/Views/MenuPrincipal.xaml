@@ -1,24 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Album_copa_do_mundo.Views.MenuPrincipal"
-             Title="MenuPrincipal">
-    
-    <FlexLayout Direction="Column" JustifyContent="SpaceBetween" Padding="20">
-        <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
-            <Image Source="copa2026_logo.png" HeightRequest="150" />
-            <Label Text="Álbum Copa 2026" FontSize="28" FontAttributes="Bold" TextColor="#1A1A1A" HorizontalOptions="Center"/>
-        </VerticalStackLayout>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Album_copa_do_mundo.Views.MenuPrincipal"
+    Background="{StaticResource FundoEscuro}">
 
-        <VerticalStackLayout Spacing="20" HorizontalOptions="Fill">
-            <Button Text="Cadastrar Figurinha" Clicked="OnCadastroClicked" BackgroundColor="#0033A0" TextColor="White" CornerRadius="10" HeightRequest="50"/>
-            <Button Text="Minha Coleção" Clicked="OnListaClicked" BackgroundColor="#E3000F" TextColor="White" CornerRadius="10" HeightRequest="50"/>
-        </VerticalStackLayout>
+    <FlexLayout Direction="Column"
+                JustifyContent="SpaceBetween"
+                Padding="25">
 
-        <VerticalStackLayout HorizontalOptions="Center">
-            <Label Text="v1.0.0" FontSize="12" TextColor="Gray" HorizontalOptions="Center"/>
-            <Label Text="Desenvolvido por: [Seus Nomes]" FontSize="12" TextColor="Gray" HorizontalOptions="Center"/>
-        </VerticalStackLayout>
+        <StackLayout HorizontalOptions="Center">
+            <Image Source="ilustracao_copa_mundo.png"
+                   HeightRequest="180"
+                   Margin="0,0,0,10"/>
+            <Label Text="FIGUVERSE"
+                   Style="{StaticResource TituloPrincipal}"/>
+            <Label Text="Gerencie suas figurinhas da copa de 2026"
+                   Style="{StaticResource Subtitulo}"/>
+        </StackLayout>
+
+        <Border Style="{StaticResource EstiloCard}">
+
+            <StackLayout Spacing="20">
+                <Button Text="Cadastro de figurinhas"
+                        Style="{StaticResource BotaoPrincipal}"
+                        Clicked="OnCadastroFigurinhasClicked"/>
+                <Button Text="Minha coleção"
+                        Style="{StaticResource BotaoVermelho}"
+                        Clicked="OnListagemFigurinhasClicked"/>
+            </StackLayout>
+            
+        </Border>
+
+        <StackLayout HorizontalOptions="Center"
+                     Spacing="2">
+            <Label Text="v1.0.0"
+                   Style="{StaticResource Subtitulo}"/>
+            <Label Text="Desenvolvido por Douglas Augusto, João Victor Demarco e Jonathan Feliciano"
+                   Style="{StaticResource Subtitulo}"/>
+        </StackLayout>
+
     </FlexLayout>
-    
+
 </ContentPage>

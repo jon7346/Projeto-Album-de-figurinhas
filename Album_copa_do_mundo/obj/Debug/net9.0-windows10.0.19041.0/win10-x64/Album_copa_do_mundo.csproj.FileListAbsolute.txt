@@ -575,11 +575,6 @@ C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\n
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appiconWideTile.scale-150.png
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appiconWideTile.scale-200.png
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appiconWideTile.scale-400.png
-C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dotnet_bot.scale-100.png
-C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dotnet_bot.scale-125.png
-C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dotnet_bot.scale-150.png
-C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dotnet_bot.scale-200.png
-C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dotnet_bot.scale-400.png
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\CoreMessagingXP.dll
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dcompi.dll
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\dwmcorei.dll
@@ -1010,11 +1005,6 @@ C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\n
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png
-C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png
-C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png
-C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png
-C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png
-C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\mauiimage.outputs
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\Album_copa_do_mundo.AssemblyInfoInputs.cache
@@ -1043,3 +1033,5 @@ C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\n
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
+C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\ilustracao_copa_mundo.scale-100.png
+C:\Projetos\Pessoais\Projeto-Album-de-figurinhas\Album_copa_do_mundo\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\ilustracao_copa_mundo.scale-100.png
