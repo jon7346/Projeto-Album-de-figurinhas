@@ -1,14 +1,9 @@
 ﻿using PCLExt.FileStorage.Folders;
 using SQLite;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Album_copa_do_mundo.Services
 {
-    public class DataBaseService
+    public class DatabaseService
     {
         public SQLiteConnection GetConnection()
         {

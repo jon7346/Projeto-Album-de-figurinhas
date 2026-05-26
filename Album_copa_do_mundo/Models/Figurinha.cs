@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SQLite; 
-using System.ComponentModel;    
+﻿using SQLite;
 
 namespace Album_copa_do_mundo.Models
 {
-    public class FigurinhasModel 
+    public class Figurinha
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        public string FotoDir { get; set; }
+        public string DirImagem { get; set; }
         public string NomeJogador { get; set; }
         public string Selecao { get; set; }
         public string Tipo { get; set; }

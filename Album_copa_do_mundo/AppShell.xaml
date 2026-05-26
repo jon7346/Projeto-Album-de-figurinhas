@@ -6,7 +6,7 @@
     xmlns:views="clr-namespace:Album_copa_do_mundo.Views"
     Title="Album_copa_do_mundo">
     <ShellContent
-         Title="Menu"
+        Title="Menu"
         ContentTemplate="{DataTemplate views:MenuPrincipal}"
         Route="MenuPrincipal" />
 

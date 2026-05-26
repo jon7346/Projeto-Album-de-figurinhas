@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Album_copa_do_mundo.Services
+﻿namespace Album_copa_do_mundo.Services
 {
     public static class ImageService
     {
@@ -32,14 +26,12 @@ namespace Album_copa_do_mundo.Services
                     Directory.CreateDirectory(dirPasta);
 
                 string nomeOriginal = Path.GetFileName(dirOriginal);
-
                 dirDestino = Path.Combine(dirPasta, nomeOriginal);
 
                 File.Copy(dirOriginal, dirDestino, overwrite: true);
             }
 
             return dirDestino;
-
         }
     }
 }

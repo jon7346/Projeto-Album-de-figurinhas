@@ -16,7 +16,7 @@ namespace Album_copa_do_mundo
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
