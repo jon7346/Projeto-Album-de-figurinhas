@@ -42,4 +42,20 @@
     <SolidColorBrush x:Key="Gray600Brush" Color="{StaticResource Gray600}"/>
     <SolidColorBrush x:Key="Gray900Brush" Color="{StaticResource Gray900}"/>
     <SolidColorBrush x:Key="Gray950Brush" Color="{StaticResource Gray950}"/>
+
+    <!-- Cores da copa -->
+    <Color x:Key="AzulCopa">#0B1F3A</Color>
+    <Color x:Key="VermelhoCopa">#D72638</Color>
+    <Color x:Key="DouradoCopa">#F4C542</Color>
+
+    <Color x:Key="FundoEscuro">#07111F</Color>
+    <Color x:Key="FundoCartao">#132238</Color>
+
+    <Color x:Key="TextoPrimario">#FFFFFF</Color>
+    <Color x:Key="TextoSecundario">#B8C1CC</Color>
+
+    <Color x:Key="AzulEscuroBotao">#0057D9</Color>
+    <Color x:Key="AzulClaroBotao">#358edf</Color>
+    <Color x:Key="VerdeBotao">#399353</Color>
+    <Color x:Key="VermelhoBotao">#D72638</Color>
 </ResourceDictionary>
