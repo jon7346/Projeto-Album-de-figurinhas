@@ -5,12 +5,12 @@ namespace Album_copa_do_mundo.Controllers
 {
     public class FigurinhaController
     {
-        DataBaseService _database;
+        DatabaseService _database;
         SQLiteConnection _connection;
 
         public FigurinhaController()
         {
-            _database = new DataBaseService();
+            _database = new DatabaseService();
 
             _connection = _database.GetConnection();
             _connection.CreateTable<Figurinha>();

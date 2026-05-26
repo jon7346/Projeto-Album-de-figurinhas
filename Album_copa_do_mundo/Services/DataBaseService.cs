@@ -7,14 +7,16 @@ namespace Album_copa_do_mundo.Services
     {
         public SQLiteConnection GetConnection()
         {
-            var pasta = new LocalRootFolder();
+            var pastaLocal = new LocalRootFolder();
 
-            var arquivo =
-                pasta.CreateFile("appcopa",
+            // Cria o arquivo do banco de dados se não existir
+            // e obtém o caminho do arquivo
+            var arquivoBanco =
+                pastaLocal.CreateFile("appcopa",
                     PCLExt.FileStorage.CreationCollisionOption.
                         OpenIfExists);
 
-            return new SQLiteConnection(arquivo.Path);
+            return new SQLiteConnection(arquivoBanco.Path);
         }
     }
 }
