@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{57C910CF-E6C2-489D-A456-F9BF34871AAD}|Album_copa_do_mundo\\Album_copa_do_mundo.csproj|c:\\projetos\\pessoais\\projeto-album-de-figurinhas\\album_copa_do_mundo\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{57C910CF-E6C2-489D-A456-F9BF34871AAD}|Album_copa_do_mundo\\Album_copa_do_mundo.csproj|solutionrelative:album_copa_do_mundo\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57C910CF-E6C2-489D-A456-F9BF34871AAD}|Album_copa_do_mundo\\Album_copa_do_mundo.csproj|c:\\projetos\\pessoais\\projeto-album-de-figurinhas\\album_copa_do_mundo\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{57C910CF-E6C2-489D-A456-F9BF34871AAD}|Album_copa_do_mundo\\Album_copa_do_mundo.csproj|solutionrelative:album_copa_do_mundo\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57C910CF-E6C2-489D-A456-F9BF34871AAD}|Album_copa_do_mundo\\Album_copa_do_mundo.csproj|c:\\projetos\\pessoais\\projeto-album-de-figurinhas\\album_copa_do_mundo\\views\\pgcadastrofigurinhas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{57C910CF-E6C2-489D-A456-F9BF34871AAD}|Album_copa_do_mundo\\Album_copa_do_mundo.csproj|solutionrelative:album_copa_do_mundo\\views\\pgcadastrofigurinhas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57C910CF-E6C2-489D-A456-F9BF34871AAD}|Album_copa_do_mundo\\Album_copa_do_mundo.csproj|c:\\projetos\\pessoais\\projeto-album-de-figurinhas\\album_copa_do_mundo\\views\\pgcadastrofigurinhas.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{57C910CF-E6C2-489D-A456-F9BF34871AAD}|Album_copa_do_mundo\\Album_copa_do_mundo.csproj|solutionrelative:album_copa_do_mundo\\views\\pgcadastrofigurinhas.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57C910CF-E6C2-489D-A456-F9BF34871AAD}|Album_copa_do_mundo\\Album_copa_do_mundo.csproj|c:\\projetos\\pessoais\\projeto-album-de-figurinhas\\album_copa_do_mundo\\views\\menuprincipal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{57C910CF-E6C2-489D-A456-F9BF34871AAD}|Album_copa_do_mundo\\Album_copa_do_mundo.csproj|solutionrelative:album_copa_do_mundo\\views\\menuprincipal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,22 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MenuPrincipal.xaml",
-              "DocumentMoniker": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\Album_copa_do_mundo\\Views\\MenuPrincipal.xaml",
-              "RelativeDocumentMoniker": "Album_copa_do_mundo\\Views\\MenuPrincipal.xaml",
-              "ToolTip": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\Album_copa_do_mundo\\Views\\MenuPrincipal.xaml",
-              "RelativeToolTip": "Album_copa_do_mundo\\Views\\MenuPrincipal.xaml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-26T17:59:43.335Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -85,58 +50,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PgCadastroFigurinhas.xaml",
-              "DocumentMoniker": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\Album_copa_do_mundo\\Views\\PgCadastroFigurinhas.xaml",
-              "RelativeDocumentMoniker": "Album_copa_do_mundo\\Views\\PgCadastroFigurinhas.xaml",
-              "ToolTip": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\Album_copa_do_mundo\\Views\\PgCadastroFigurinhas.xaml",
-              "RelativeToolTip": "Album_copa_do_mundo\\Views\\PgCadastroFigurinhas.xaml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-26T17:59:34.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PgCadastroFigurinhas.xaml.cs",
-              "DocumentMoniker": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\Album_copa_do_mundo\\Views\\PgCadastroFigurinhas.xaml.cs",
-              "RelativeDocumentMoniker": "Album_copa_do_mundo\\Views\\PgCadastroFigurinhas.xaml.cs",
-              "ToolTip": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\Album_copa_do_mundo\\Views\\PgCadastroFigurinhas.xaml.cs",
-              "RelativeToolTip": "Album_copa_do_mundo\\Views\\PgCadastroFigurinhas.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T18:15:43.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Colors.xaml",
-              "DocumentMoniker": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\Album_copa_do_mundo\\Resources\\Styles\\Colors.xaml",
-              "RelativeDocumentMoniker": "Album_copa_do_mundo\\Resources\\Styles\\Colors.xaml",
-              "ToolTip": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\Album_copa_do_mundo\\Resources\\Styles\\Colors.xaml",
-              "RelativeToolTip": "Album_copa_do_mundo\\Resources\\Styles\\Colors.xaml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-26T19:14:07.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Styles.xaml",
-              "DocumentMoniker": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\Album_copa_do_mundo\\Resources\\Styles\\Styles.xaml",
-              "RelativeDocumentMoniker": "Album_copa_do_mundo\\Resources\\Styles\\Styles.xaml",
-              "ToolTip": "C:\\Projetos\\Pessoais\\Projeto-Album-de-figurinhas\\Album_copa_do_mundo\\Resources\\Styles\\Styles.xaml",
-              "RelativeToolTip": "Album_copa_do_mundo\\Resources\\Styles\\Styles.xaml",
-              "ViewState": "AgIAABYCAAAAAAAAAAAIwCUCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-26T19:00:22.73Z",
-              "EditorCaption": ""
             }
           ]
         },

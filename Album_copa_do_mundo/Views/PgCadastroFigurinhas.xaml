@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Album_copa_do_mundo.Views.PgCadastroFigurinhas"
              Background="{StaticResource FundoEscuro}">
-    
     <ScrollView Padding="25">
         
         <StackLayout Spacing="20">
@@ -15,8 +14,10 @@
                         HorizontalOptions="Start"
                         Style="{StaticResource BotaoNeutro}"
                         Clicked="OnVoltarClicked"/>
+                
                 <Label Text="Cadastro de figurinhas"
                    Style="{StaticResource TituloPrincipal}"/>
+                
             </StackLayout>
 
             <Border Style="{StaticResource EstiloCard}"

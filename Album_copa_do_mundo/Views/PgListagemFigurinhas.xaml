@@ -2,50 +2,145 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Album_copa_do_mundo.Views.PgListagemFigurinhas"
-             Title="ListaFigurinhas">
-    <VerticalStackLayout>
-        <VerticalStackLayout Padding="15" Spacing="10" BackgroundColor="#EAEAEA">
-            <SearchBar x:Name="SearchNome" Placeholder="Buscar por nome..." TextChanged="OnFiltroChanged"/>
-            <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
-                <HorizontalStackLayout>
-                    <CheckBox x:Name="CheckFiltroObtido" CheckedChanged="OnFiltroChanged"/>
-                    <Label Text="Obtidas" VerticalOptions="Center"/>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout>
-                    <CheckBox x:Name="CheckFiltroDesejado" CheckedChanged="OnFiltroChanged"/>
-                    <Label Text="Desejadas" VerticalOptions="Center"/>
-                </HorizontalStackLayout>
-            </HorizontalStackLayout>
-        </VerticalStackLayout>
+             Background="{StaticResource FundoEscuro}">
+    <ScrollView Padding="25">
 
-        <ListView x:Name="ListaDeFigurinha" HasUnevenRows="True" VerticalOptions="Fill">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <FlexLayout Direction="Row" AlignItems="Center" Padding="10">
-                            <Image Source="{Binding FotoPath}" WidthRequest="50" HeightRequest="50" Aspect="AspectFill" Margin="0,0,10,0"/>
+        <StackLayout Spacing="20">
 
-                            <VerticalStackLayout FlexLayout.Grow="1">
-                                <Label Text="{Binding NomeJogador}" FontAttributes="Bold" FontSize="16"/>
-                                <Label Text="{Binding Selecao}" FontSize="14" TextColor="Gray"/>
-                                <Label Text="{Binding Tipo}" FontSize="12" TextColor="Teal"/>
-                            </VerticalStackLayout>
+            <StackLayout Spacing="10">
+                <Button x:Name="btnVoltar"
+                        Text="Voltar"
+                        WidthRequest="100"
+                        HorizontalOptions="Start"
+                        Style="{StaticResource BotaoNeutro}"
+                        Clicked="OnVoltarClicked"/>
 
-                            <HorizontalStackLayout Spacing="15" Margin="10,0,0,0">
-                                <ImageButton Source="{Binding Obtido, Converter={StaticResource BoolToIconCheckConverter}}" 
-                                         CommandParameter="{Binding .}" Clicked="OnToggleObtidoClicked" WidthRequest="25"/>
+                <Label Text="Minha coleção"
+                       Style="{StaticResource TituloPrincipal}"/>
 
-                                <ImageButton Source="{Binding Desejado, Converter={StaticResource BoolToIconHeartConverter}}" 
-                                         CommandParameter="{Binding .}" Clicked="OnToggleDesejadoClicked" WidthRequest="25"/>
+            </StackLayout>
 
-                                <ImageButton Source="trash_icon.png" 
-                                         CommandParameter="{Binding .}" Clicked="OnDeletarClicked" WidthRequest="25"/>
-                            </HorizontalStackLayout>
-                        </FlexLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </VerticalStackLayout>
+            <Border Style="{StaticResource EstiloCard}"
+                    Stroke="{StaticResource VerdeCopa}"
+                    StrokeThickness="2">
+                <StackLayout Spacing="12">
+
+                    <Label Text="Filtros de pesquisa"/>
+
+                    <Entry x:Name="txtFiltroNomeJogador"
+                           Placeholder="Nome do jogador"/>
+
+                    <HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="5"
+                                               WidthRequest="130">
+                            <Label Text="Obtidas"
+                                   VerticalOptions="Center"/>
+                            <Switch x:Name="switchObtidas"
+                                    Style="{StaticResource EstiloSwitch}"
+                                    IsToggled="True"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Spacing="5"
+                                               WidthRequest="130">
+                            <Label Text="Desejadas"
+                                   VerticalOptions="Center"/>
+                            <Switch x:Name="switchDesejadas"
+                                    Style="{StaticResource EstiloSwitch}"
+                                    IsToggled="True"/>
+                        </HorizontalStackLayout>
+
+                    </HorizontalStackLayout>
+
+                    <Button Text="Buscar"
+                            Style="{StaticResource BotaoPrincipal}"
+                            Clicked="OnBuscarClicked"/>
+
+                </StackLayout>
+
+            </Border>
+
+            <Label Text="Figurinhas:"/>
+
+            <ListView x:Name="lsvFigurinhas">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Border Style="{StaticResource EstiloCard}"
+                                    Stroke="{StaticResource DouradoCopa}"
+                                    StrokeThickness="2"
+                                    Margin="0,10">
+                                <StackLayout Spacing="12">
+                                    <HorizontalStackLayout Spacing="15">
+
+                                        <Image Source="{Binding DirImagem}"
+                                               HeightRequest="100"
+                                               WidthRequest="100"/>
+
+                                        <StackLayout VerticalOptions="Center">
+
+                                            <Label Text="{Binding NomeJogador}"
+                                                   FontSize="20"
+                                                   FontAttributes="Bold"/>
+
+                                            <Label Text="{Binding Selecao}"/>
+
+                                            <Label Text="{Binding Tipo}"/>
+
+                                        </StackLayout>
+
+                                    </HorizontalStackLayout>
+
+                                    <HorizontalStackLayout HorizontalOptions="Start"
+                                                           Spacing="15">
+
+                                        <Button Text="{Binding TextoObtido}"
+                                            TextColor="{Binding CorObtido}"
+                                            BackgroundColor="{StaticResource FundoCard}"
+                                            BorderColor="{StaticResource DouradoCopa}"
+                                            BorderWidth="2"
+                                            FontSize="20"
+                                            WidthRequest="55"
+                                            HeightRequest="45"
+                                            Clicked="OnObtidoClicked"
+                                            CommandParameter="{Binding .}"/>
+
+                                        <Button Text="{Binding TextoDesejado}"
+                                            TextColor="{Binding CorDesejado}"
+                                            BackgroundColor="{StaticResource FundoCard}"
+                                            BorderColor="{StaticResource DouradoCopa}"
+                                            BorderWidth="2"
+                                            FontSize="20"
+                                            WidthRequest="55"
+                                            HeightRequest="45"
+                                            Clicked="OnDesejadoClicked"
+                                            CommandParameter="{Binding .}"/>
+
+                                        <Button Text="🗑"
+                                            BackgroundColor="{StaticResource VermelhoBotao}"
+                                            FontSize="20"
+                                            WidthRequest="55"
+                                            HeightRequest="45"
+                                            Clicked="OnExcluirClicked"
+                                            CommandParameter="{Binding .}"/>
+
+                                    </HorizontalStackLayout>
+                                </StackLayout>
+                            </Border>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+            <Label x:Name="txtNenhumaFigurinha"
+                   Style="{StaticResource Subtitulo}"
+                   Text="Nenhuma figurinha foi encontrada. Tente fazer outra pesquisa ou cadastrar novas figurinhas!"
+                   HorizontalOptions="Center"
+                   IsVisible="False"/>
+
+        </StackLayout>
+
+    </ScrollView>
 
 </ContentPage>

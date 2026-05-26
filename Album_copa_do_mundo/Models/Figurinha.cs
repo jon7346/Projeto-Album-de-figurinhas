@@ -13,5 +13,13 @@ namespace Album_copa_do_mundo.Models
         public bool Obtido { get; set; }
         public bool Desejado { get; set; }
 
+        // Propriedades para Binding na hora de exibir
+        // a listagem de figurinhas
+        public string TextoObtido => Obtido ? "✓" : "✕";
+        public Color CorObtido => Obtido ? Colors.Green : Colors.Gray;
+
+        public string TextoDesejado => Desejado ? "❤" : "♡";
+        public Color CorDesejado => Desejado ? Colors.Red : Colors.White;
+
     }
 }

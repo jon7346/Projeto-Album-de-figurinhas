@@ -50,7 +50,7 @@
     <Color x:Key="DouradoCopa">#F4C542</Color>
 
     <Color x:Key="FundoEscuro">#07111F</Color>
-    <Color x:Key="FundoCartao">#132238</Color>
+    <Color x:Key="FundoCard">#132238</Color>
 
     <Color x:Key="TextoPrimario">#FFFFFF</Color>
     <Color x:Key="TextoSecundario">#B8C1CC</Color>

@@ -31,20 +31,29 @@ namespace Album_copa_do_mundo.Controllers
             return _connection.Delete(value) > 0;
         }
 
-        public Figurinha GetById(int value)
+        public List<Figurinha> GetByFilters(
+            string nomeJogador,
+            bool somenteObtidos,
+            bool somenteDesejadas)
         {
-            return _connection.Find<Figurinha>(value);
-        }
+            // Primeiro "criamos" a consulta sem filtros
+            var queryFigurinhas = _connection.Table<Figurinha>();
 
-        public List<Figurinha> GetByPlayerName(string value)
-        {
-            return _connection.Table<Figurinha>().
-                    Where(x => x.NomeJogador.Contains(value)).ToList();
-        }
+            // Depois vamos aplicando os filtros conforme os parâmetros
+            if (!string.IsNullOrWhiteSpace(nomeJogador))
+            {
+                // Usamos ToLower para que ele não considere diferenças
+                // entre maiúsculas e minúsculas
+                queryFigurinhas = queryFigurinhas.
+                    Where(x => x.NomeJogador.ToLower().Contains(nomeJogador.ToLower()));
+            }
 
-        public List<Figurinha> GetAll()
-        {
-            return _connection.Table<Figurinha>().ToList();
+            // Sempre filtra pelo valor true ou false de "obtido" ou "desejado"
+            queryFigurinhas = queryFigurinhas.Where(x => x.Obtido == somenteObtidos);
+            queryFigurinhas = queryFigurinhas.Where(x => x.Desejado == somenteDesejadas);
+
+            // No final, retornamos uma lista com os resultados
+            return queryFigurinhas.ToList();
         }
     }
 }
