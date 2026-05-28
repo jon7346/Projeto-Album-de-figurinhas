@@ -30,108 +30,107 @@
                     <Entry x:Name="txtFiltroNomeJogador"
                            Placeholder="Nome do jogador"/>
 
-                    <HorizontalStackLayout>
+                    <Label Text="Somente obtidas?"/>
+                    <Picker x:Name="pickerFiltroObtidas"
+                            SelectedIndexChanged="OnFiltroObtidasChanged">
+                        <Picker.Items>
+                            <x:String>Sim</x:String>
+                            <x:String>Não</x:String>
+                            <x:String>Ambos</x:String>
+                        </Picker.Items>
+                    </Picker>
 
-                        <HorizontalStackLayout Spacing="5"
-                                               WidthRequest="130">
-                            <Label Text="Obtidas"
-                                   VerticalOptions="Center"/>
-                            <Switch x:Name="switchObtidas"
-                                    Style="{StaticResource EstiloSwitch}"
-                                    IsToggled="True"/>
-                        </HorizontalStackLayout>
-
-                        <HorizontalStackLayout Spacing="5"
-                                               WidthRequest="130">
-                            <Label Text="Desejadas"
-                                   VerticalOptions="Center"/>
-                            <Switch x:Name="switchDesejadas"
-                                    Style="{StaticResource EstiloSwitch}"
-                                    IsToggled="True"/>
-                        </HorizontalStackLayout>
-
-                    </HorizontalStackLayout>
+                    <Label Text="Somente desejadas?"/>
+                    <Picker x:Name="pickerFiltroDesejadas"
+                            SelectedIndexChanged="OnFiltroDesejadasChanged">
+                        <Picker.Items>
+                            <x:String>Sim</x:String>
+                            <x:String>Não</x:String>
+                            <x:String>Ambos</x:String>
+                        </Picker.Items>
+                    </Picker>
 
                     <Button Text="Buscar"
                             Style="{StaticResource BotaoPrincipal}"
-                            Clicked="OnBuscarClicked"/>
+                            Clicked="OnBuscarClicked"
+                            Margin="0,10,0,0"/>
 
                 </StackLayout>
 
             </Border>
 
-            <Label Text="Figurinhas:"/>
+            <StackLayout Spacing="10">
+                <Label Text="Figurinhas:"/>
 
-            <ListView x:Name="lsvFigurinhas">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Border Style="{StaticResource EstiloCard}"
-                                    Stroke="{StaticResource DouradoCopa}"
-                                    StrokeThickness="2"
-                                    Margin="0,10">
-                                <StackLayout Spacing="12">
-                                    <HorizontalStackLayout Spacing="15">
+                <ListView x:Name="lsvFigurinhas">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Border Style="{StaticResource EstiloCard}"
+                                        Stroke="{StaticResource DouradoCopa}"
+                                        StrokeThickness="2"
+                                        Margin="0,15">
+                                    <StackLayout Spacing="12">
+                                        <HorizontalStackLayout Spacing="15">
 
-                                        <Image Source="{Binding DirImagem}"
-                                               HeightRequest="100"
-                                               WidthRequest="100"/>
+                                            <Image Source="{Binding DirImagem}"
+                                                   HeightRequest="100"
+                                                   WidthRequest="100"/>
 
-                                        <StackLayout VerticalOptions="Center">
+                                            <StackLayout VerticalOptions="Center">
 
-                                            <Label Text="{Binding NomeJogador}"
-                                                   FontSize="20"
-                                                   FontAttributes="Bold"/>
+                                                <Label Text="{Binding NomeJogador}"
+                                                       FontSize="20"
+                                                       FontAttributes="Bold"/>
+                                                <Label Text="{Binding Selecao}"/>
+                                                <Label Text="{Binding Tipo}"/>
 
-                                            <Label Text="{Binding Selecao}"/>
+                                            </StackLayout>
 
-                                            <Label Text="{Binding Tipo}"/>
+                                        </HorizontalStackLayout>
 
-                                        </StackLayout>
+                                        <HorizontalStackLayout HorizontalOptions="Start"
+                                                               Spacing="15">
 
-                                    </HorizontalStackLayout>
+                                            <Button Text="{Binding TextoObtido}"
+                                                    TextColor="{Binding CorObtido}"
+                                                    BackgroundColor="{StaticResource FundoCard}"
+                                                    BorderColor="{StaticResource DouradoCopa}"
+                                                    BorderWidth="2"
+                                                    FontSize="20"
+                                                    WidthRequest="55"
+                                                    HeightRequest="45"
+                                                    Clicked="OnObtidoClicked"
+                                                    CommandParameter="{Binding .}"/>
 
-                                    <HorizontalStackLayout HorizontalOptions="Start"
-                                                           Spacing="15">
+                                            <Button Text="{Binding TextoDesejado}"
+                                                    TextColor="{Binding CorDesejado}"
+                                                    BackgroundColor="{StaticResource FundoCard}"
+                                                    BorderColor="{StaticResource DouradoCopa}"
+                                                    BorderWidth="2"
+                                                    FontSize="20"
+                                                    WidthRequest="55"
+                                                    HeightRequest="45"
+                                                    Clicked="OnDesejadoClicked"
+                                                    CommandParameter="{Binding .}"/>
 
-                                        <Button Text="{Binding TextoObtido}"
-                                            TextColor="{Binding CorObtido}"
-                                            BackgroundColor="{StaticResource FundoCard}"
-                                            BorderColor="{StaticResource DouradoCopa}"
-                                            BorderWidth="2"
-                                            FontSize="20"
-                                            WidthRequest="55"
-                                            HeightRequest="45"
-                                            Clicked="OnObtidoClicked"
-                                            CommandParameter="{Binding .}"/>
+                                            <Button Text="🗑"
+                                                    BackgroundColor="{StaticResource VermelhoBotao}"
+                                                    FontSize="20"
+                                                    WidthRequest="55"
+                                                    HeightRequest="45"
+                                                    Clicked="OnExcluirClicked"
+                                                    CommandParameter="{Binding .}"/>
 
-                                        <Button Text="{Binding TextoDesejado}"
-                                            TextColor="{Binding CorDesejado}"
-                                            BackgroundColor="{StaticResource FundoCard}"
-                                            BorderColor="{StaticResource DouradoCopa}"
-                                            BorderWidth="2"
-                                            FontSize="20"
-                                            WidthRequest="55"
-                                            HeightRequest="45"
-                                            Clicked="OnDesejadoClicked"
-                                            CommandParameter="{Binding .}"/>
+                                        </HorizontalStackLayout>
+                                    </StackLayout>
+                                </Border>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
 
-                                        <Button Text="🗑"
-                                            BackgroundColor="{StaticResource VermelhoBotao}"
-                                            FontSize="20"
-                                            WidthRequest="55"
-                                            HeightRequest="45"
-                                            Clicked="OnExcluirClicked"
-                                            CommandParameter="{Binding .}"/>
-
-                                    </HorizontalStackLayout>
-                                </StackLayout>
-                            </Border>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-
-            </ListView>
+                </ListView>
+            </StackLayout>
 
             <Label x:Name="txtNenhumaFigurinha"
                    Style="{StaticResource Subtitulo}"

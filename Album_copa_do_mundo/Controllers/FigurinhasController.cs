@@ -33,8 +33,8 @@ namespace Album_copa_do_mundo.Controllers
 
         public List<Figurinha> GetByFilters(
             string nomeJogador,
-            bool somenteObtidos,
-            bool somenteDesejadas)
+            bool? obtidas,
+            bool? desejadas)
         {
             // Primeiro "criamos" a consulta sem filtros
             var queryFigurinhas = _connection.Table<Figurinha>();
@@ -48,9 +48,15 @@ namespace Album_copa_do_mundo.Controllers
                     Where(x => x.NomeJogador.ToLower().Contains(nomeJogador.ToLower()));
             }
 
-            // Sempre filtra pelo valor true ou false de "obtido" ou "desejado"
-            queryFigurinhas = queryFigurinhas.Where(x => x.Obtido == somenteObtidos);
-            queryFigurinhas = queryFigurinhas.Where(x => x.Desejado == somenteDesejadas);
+            // obtidas == false => não busca figurinhas obtidas
+            // obtidas == true => busca somente figurinhas obtidas
+            // obtidas == null => não filtra por obtidas (obtidas e não obtidas)
+            queryFigurinhas = queryFigurinhas.Where(x => x.Obtido == obtidas || obtidas == null);
+
+            // desejadas == false => não busca figurinhas desejadas
+            // desejadas == true => busca somente figurinhas desejadas
+            // desejadas == null => não filtra por desejadas (desejadas e não desejadas)
+            queryFigurinhas = queryFigurinhas.Where(x => x.Desejado == desejadas || desejadas == null);
 
             // No final, retornamos uma lista com os resultados
             return queryFigurinhas.ToList();

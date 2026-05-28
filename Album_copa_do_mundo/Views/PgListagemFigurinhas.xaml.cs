@@ -13,13 +13,13 @@ public partial class PgListagemFigurinhas : ContentPage
 
         _controller = new FigurinhaController();
 
+        // Seleciona a opção "todos" por padrão nos filtros
+        pickerFiltroObtidas.SelectedIndex = 2;
+        pickerFiltroDesejadas.SelectedIndex = 2;
+
         // Ao abrir a tela, já carrega a lista de figurinhas
-        // sem filtro de nome mas incluindo figurinhas obtidas e desejadas
-        AtualizarListaRegistros(
-            nomeJogador: "",
-            somenteObtidas: switchObtidas.IsToggled,
-            somenteDesejadas: switchDesejadas.IsToggled
-            );
+        // com todos os registros cadastrados
+        AtualizarListaRegistros();
     }
 
     private void OnVoltarClicked(object sender, EventArgs e)
@@ -29,11 +29,7 @@ public partial class PgListagemFigurinhas : ContentPage
 
     private void OnBuscarClicked(object sender, EventArgs e)
     {
-        AtualizarListaRegistros(
-            nomeJogador: txtFiltroNomeJogador.Text?.Trim() ?? "",
-            somenteObtidas: switchObtidas.IsToggled,
-            somenteDesejadas: switchDesejadas.IsToggled
-            );
+        AtualizarListaRegistros();
     }
 
     private void OnObtidoClicked(object sender, EventArgs e)
@@ -48,11 +44,7 @@ public partial class PgListagemFigurinhas : ContentPage
             if (_controller.Update(figurinha))
             {
                 // Se conseguiu salvar, atualiza a lista para refletir a mudança
-                AtualizarListaRegistros(
-                    nomeJogador: txtFiltroNomeJogador.Text?.Trim() ?? "",
-                    somenteObtidas: switchObtidas.IsToggled,
-                    somenteDesejadas: switchDesejadas.IsToggled
-                    );
+                AtualizarListaRegistros();
             }
             else
             {
@@ -73,11 +65,7 @@ public partial class PgListagemFigurinhas : ContentPage
             if (_controller.Update(figurinha))
             {
                 // Se conseguiu salvar, atualiza a lista para refletir a mudança
-                AtualizarListaRegistros(
-                    nomeJogador: txtFiltroNomeJogador.Text?.Trim() ?? "",
-                    somenteObtidas: switchObtidas.IsToggled,
-                    somenteDesejadas: switchDesejadas.IsToggled
-                    );
+                AtualizarListaRegistros();
             }
             else
             {
@@ -108,11 +96,7 @@ public partial class PgListagemFigurinhas : ContentPage
             if (_controller.Delete(figurinha))
             {
                 // Se conseguiu excluir, atualiza a lista para refletir a mudança
-                AtualizarListaRegistros(
-                    nomeJogador: txtFiltroNomeJogador.Text?.Trim() ?? "",
-                    somenteObtidas: switchObtidas.IsToggled,
-                    somenteDesejadas: switchDesejadas.IsToggled
-                    );
+                AtualizarListaRegistros();
             }
             else
             {
@@ -121,13 +105,13 @@ public partial class PgListagemFigurinhas : ContentPage
         }
     }
 
-    private void AtualizarListaRegistros(
-        string nomeJogador,
-        bool somenteObtidas,
-        bool somenteDesejadas
-        )
+    private void AtualizarListaRegistros()
     {
-        var figurinhas = _controller.GetByFilters(nomeJogador, somenteObtidas, somenteDesejadas);
+        var nomeJogador = txtFiltroNomeJogador.Text?.Trim() ?? "";
+        var obtidas = ObterValorFiltroObtidas();
+        var desejadas = ObterValorFiltroDesejadas();
+
+        var figurinhas = _controller.GetByFilters(nomeJogador, obtidas, desejadas);
         lsvFigurinhas.ItemsSource = figurinhas;
 
         // Exibe o texto de "nenhuma figurinha encontrada"
@@ -137,5 +121,44 @@ public partial class PgListagemFigurinhas : ContentPage
         // Esconde a lista (para não ocupar espaço) se a lista
         // for vazia
         lsvFigurinhas.IsVisible = figurinhas.Any();
+    }
+
+    private bool? ObterValorFiltroObtidas()
+    {
+        switch (pickerFiltroObtidas.SelectedIndex)
+        {
+            case 0: // Somente "obtidas"
+                return true;
+            case 1: // Somente "não obtidas"
+                return false;
+            default: // Todos
+                return null;
+        }
+    }
+
+    private bool? ObterValorFiltroDesejadas()
+    {
+        switch (pickerFiltroDesejadas.SelectedIndex)
+        {
+            case 0: // Somente "desejadas"
+                return true;
+            case 1: // Somente "não desejadas"
+                return false;
+            default: // Todos
+                return null;
+        }
+    }
+
+    // Atualiza automaticamente a lista ao mudar o valor dos filtros
+    // de "obtidas" ou "desejadas" para que o usuário não precise ficar
+    // clicando no botão "Buscar" toda hora
+    private void OnFiltroObtidasChanged(object sender, EventArgs e)
+    {
+        AtualizarListaRegistros();
+    }
+
+    private void OnFiltroDesejadasChanged(object sender, EventArgs e)
+    {
+        AtualizarListaRegistros();
     }
 }
